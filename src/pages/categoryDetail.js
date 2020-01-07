@@ -37,7 +37,7 @@ export default class CategoryDetail extends Component {
     const {params} = this.props.navigation.state;
     console.log(params.categoryId);
     Axios.get(
-      `http://192.168.43.163:5000/api/v1/category/${params.categoryId}/events`,
+      `https://api-tiket-ku.herokuapp.com/api/v1/category/${params.categoryId}/events`,
     ).then(res => {
       this.setState({event: res.data});
       console.log(res.data);

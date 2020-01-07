@@ -29,7 +29,9 @@ export default class EventDetail extends Component {
   componentDidMount() {
     const {params} = this.props.navigation.state;
 
-    Axios.get(`http://192.168.43.163:5000/api/v1/event/ ${params.events}`)
+    Axios.get(
+      `https://api-tiket-ku.herokuapp.com/api/v1/event/ ${params.events}`,
+    )
       .then(res => {
         this.setState({event: res.data});
         console.log(res.data);

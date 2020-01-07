@@ -35,14 +35,14 @@ export default class Timeline extends Component {
   }
 
   componentDidMount() {
-    Axios.get(`http://192.168.43.163:5000/api/v1/categories`)
+    Axios.get(`https://api-tiket-ku.herokuapp.com/api/v1/categories`)
       .then(res => {
         const categories = res.data;
 
         this.setState({categories: res.data});
       })
       .catch(error => console.log(error));
-    Axios.get(`http://192.168.43.163:5000/api/v1/upComing`)
+    Axios.get(`https://api-tiket-ku.herokuapp.com/api/v1/upComing`)
       .then(res => {
         const events = res.data;
 
